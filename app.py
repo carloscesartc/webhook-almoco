@@ -26,7 +26,7 @@ def send_auto_reply(account_id, conversation_id):
         "api_access_token": CHATWOOT_API_TOKEN
     }
     data = {
-        "content": "Olá! Nosso horário de atendimento vai das 08h às 12h e das 13h30 às 18h. Voltamos em breve!",
+        "content": "Olá! Nosso horário de atendimento vai das 08h30 às 12h e das 13h30 às 17h55. Voltamos em breve!",
         "message_type": "outgoing"
     }
     requests.post(url, json=data, headers=headers)
