@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: webhook-almoco
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    plan: free
+    envVars:
+      - key: CHATWOOT_API_URL
+        value: https://bot.tecmultix.com.br/
+      - key: ZWFdBJA4qtcuD98fnoQ9MnqD
+        value: seu_token_do_chatwoot
