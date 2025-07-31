@@ -29,12 +29,9 @@ def send_auto_reply(account_id, conversation_id):
         "content": "Olá! Nosso horário de atendimento vai das 08h30 às 12h e das 13h30 às 17h55. Voltamos em breve!",
         "message_type": "outgoing"
     }
-    requests.post(url, json=data, headers=headers)
-
-if __name__ == "__main__":
-   import os
+    response = requests.post(url, json=data, headers=headers)
+    print("Resposta da API Chatwoot:", response.status_code, response.text)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
-
